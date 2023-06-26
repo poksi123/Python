@@ -1,0 +1,49 @@
+
+#q1
+import sys
+from datetime import datetime
+
+for line in sys.stdin:
+    data = line.strip().split("\t")
+    if len(data) == 6:
+        date, time, store, item, cost, payment = data
+        current_time = datetime.now().strftime("%H:%M:%S")
+        print("{0}\t{1}\t{2}".format(item, cost, current_time))
+
+#q2
+from datetime import datetime, timedelta
+
+current_datetime = datetime.now()
+next_day = current_datetime + timedelta(days=1)
+two_year = current_datetime + timedelta(days=730)
+minute_back = current_datetime + timedelta(seconds=-60)
+
+
+print(next_day)
+print(two_year)
+print(minute_back)
+
+#q3
+from datetime import timedelta
+
+Final = timedelta(days = 100, hours = 10, minutes = 13)
+
+print(Final)
+
+#q4
+
+from datetime import datetime
+
+datetime_object = datetime.now()
+print(datetime_object)
+print('Type :- ', type(datetime_object))
+
+def ft_in(x,y):
+    x = x/12
+    y = y * 12
+    print('Ft',x,'In',y,datetime_object)
+
+ft_in(9,2)
+
+
+
